@@ -1,31 +1,16 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import './style.css';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { GlobalStore } from './store/store';
+import './styles/globalStylesheet.scss';
+//https://github.com/amiroff157/movie-lab
 
-interface AppProps { }
-interface AppState {
-  name: string;
-}
-
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  }
-}
-
-render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <GlobalStore>
+      <BrowserRouter basename={process.env.PUBLIC_URL} />
+    </GlobalStore>
+    <h1>Hello World</h1>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
