@@ -12,6 +12,7 @@ import { Container } from 'react-bootstrap';
 import { PrivateRoute } from './PrivateRoute';
 import { globalContext } from '../store/store';
 import { Favorites } from '../components/Favorites';
+import { Search } from '../components/Search';
 
 export const RouterView: React.FC = () => {
   const { globalState } = React.useContext(globalContext);
@@ -26,12 +27,12 @@ export const RouterView: React.FC = () => {
           <Route exact path="/">
             <Redirect to="login" />
           </Route>
-          {/* <PrivateRoute
+          <PrivateRoute
             exact
             path="/search"
             pathname={pathname}
             component={Search}
-          />*/}
+          />
           <PrivateRoute
             exact
             path="/favorites"
