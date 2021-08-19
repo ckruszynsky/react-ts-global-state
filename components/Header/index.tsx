@@ -6,7 +6,7 @@ import { Dropdown, DropdownButton, Nav, Navbar } from 'react-bootstrap';
 import { faDatabase, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { globalContext } from '../../store/store';
 import './styles.scss';
-import logo from './logo.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Header: React.FC = () => {
@@ -21,7 +21,6 @@ export const Header: React.FC = () => {
   return (
     <Navbar collapseOnSelect expand="md" variant="dark" className="header">
       <Navbar.Brand>
-        <img src={logo} alt="logo" className="logo" />
         <span className="brand">
           Movie<span className="font-weight-bold">Lab</span>
         </span>
@@ -29,8 +28,8 @@ export const Header: React.FC = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <NavLink to="/search" activeClassName="active" className="mr-3">
-            <span>Search</span>
+          <NavLink to="/search" activeClassName="active" className="ms-4 me-2">
+            <span className="me-2">Search</span>
           </NavLink>
           <NavLink to="/favorites" activeClassName="active">
             <span>Favorites</span>
