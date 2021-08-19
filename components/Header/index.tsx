@@ -27,11 +27,19 @@ export const Header: React.FC = () => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <NavLink to="/search" activeClassName="active" className="ms-4 me-2">
-            <span className="me-2">Search</span>
+        <Nav className="me-auto">
+          <NavLink
+            to="/search"
+            activeClassName="active"
+            className="ms-2 me-2 mb-2"
+          >
+            <span>Search</span>
           </NavLink>
-          <NavLink to="/favorites" activeClassName="active">
+          <NavLink
+            to="/favorites"
+            activeClassName="active"
+            className="ms-2 me-2"
+          >
             <span>Favorites</span>
           </NavLink>
         </Nav>
