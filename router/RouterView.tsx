@@ -7,6 +7,7 @@ import {
   useLocation
 } from 'react-router-dom';
 import { Login } from '../components/Login';
+import { Header } from '../components/Header';
 import { Container } from 'react-bootstrap';
 import { PrivateRoute } from './PrivateRoute';
 import { globalContext } from '../store/store';
@@ -20,6 +21,7 @@ export const RouterView: React.FC = () => {
   return (
     <Container fluid className="p-0">
       <HashRouter>
+        <Header />
         <Switch>
           <Route exact path="/">
             <Redirect to="login" />
